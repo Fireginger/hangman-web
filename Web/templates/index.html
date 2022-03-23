@@ -1,0 +1,177 @@
+{{ define "index" }}
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Hangman Game </title>
+  <link rel="stylesheet" href="../assets/css.css">
+  <style>
+    div.a {
+      text-align: center;
+    }
+  </style>
+  <div class="a">
+    <h1>
+      <form action="/Level" method="post">
+        <button name="GOBACK" type="submit" value="GOBACK">GO BACK</button>
+      </form>
+      
+      HANGMAN WEB</h1>
+  </div>
+</head>
+
+<body>
+  <div class="a">
+    <h1><br>{{ .Title }}</h1>
+    <p> {{ .Sub }} </p>
+    <p>
+      
+    <h1>
+      <form action="/hangman" method="post">
+        Choose a letter :<input type="text" name="MyLetter" autocomplete="off" >
+        <input type="submit" value="Envoyer">
+      </form>
+    </h1>
+    </p>
+    <p>{{ .LettreStateWeb }}</p>
+  </div>
+</body>
+
+</html>
+{{ end }}
+
+<!-- Changement de page  : bonus WELCOME PAGE-->
+
+{{ define "lettreused" }}
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Hangman Game </title>
+  <link rel="stylesheet" href="../assets/css.css">
+  <style>
+    div.a {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a">
+    <p> Vous avez deja utilisez cette lettre </p>
+  </div>
+</body>
+
+</html>
+{{ end }}
+
+
+
+
+<!-- Changement de page  : bonus LEVEL-->
+
+
+{{ define "home" }}
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Hangman Game </title>
+  <link rel="stylesheet" href="../assets/css.css">
+</head>
+
+<body>
+  <div class="a">
+    <header>
+      <h1> Hangman Game</h1>
+    </header>
+    <p> choose your level : </p>
+    <form action="/hangman" method="post">
+      <ul></ul><button name="subject" type="submit" value="EASY">Facile</button></ul>
+      <ul></ul><button name="subject" type="submit" value="MEDIUM">Moyen</button></ul>
+      <ul></ul><button name="subject" type="submit" value="HARD">Difficile</button></ul>
+    </form>
+    <footer>
+      <p class="signature"> Hangman Web </p>
+    </footer>
+  </div>
+</body>
+
+</html>
+{{ end }}
+
+<!-- Changement de page  : bonus PLAY AGAIN-->
+
+{{ define "endscreen" }}
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Hangman Game </title>
+  <link rel="stylesheet" href="../assets/css.css">
+  <style>
+    div.a {
+      text-align: center;
+    }
+  </style>
+  <div class="a">
+    <h1>HANGMAN WEB</h1>
+  </div>
+</head>
+
+<body>
+  <div class="a">
+    <p>
+    <h1>
+      {{ .Sub }}
+      <form action="/" method="post">
+        <button name="PLAYAGAIN" type="submit" value="PLAYAGAIN">PLAY AGAIN</button>
+        <button name="PLAYAGAIN" type="submit" value="BACK TO HOME">BACK TO HOME</button>
+      </form>
+    </h1>
+    </p>
+  </div>
+</body>
+
+</html>
+{{ end }}
+
+<!-- Changement de page  : bonus WELCOME PAGE-->
+
+{{ define "welcome" }}
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Hangman Game </title>
+  <link rel="stylesheet" href="../assets/css.css">
+  <style>
+    div.a {
+      text-align: center;
+    }
+  </style>
+  <div class="a">
+    <h1>HANGMAN WEB</h1>
+  </div>
+</head>
+
+<body>
+  <div class="a">
+    <p>
+    <h1>
+      <form action="/Level" method="post">
+        <button name="PLAY" type="submit" value="PLAY">PLAY</button>
+        
+      </form>
+    </h1>
+    </p>
+  </div>
+</body>
+
+</html>
+{{ end }}

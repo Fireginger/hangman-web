@@ -1,0 +1,69 @@
+
+html
+{ min-height: 100%;
+  
+}
+body{
+  text-align: center;
+  /*background-color: rgb(138, 157, 219);*/
+  background: url("https://i.pinimg.com/originals/8f/93/6a/8f936ad64232368077df229dda1d0324.gif");
+}
+
+/*Header*/
+
+h1{
+  color : #ffffff;
+  font-size: 4em;
+  font-family:  folkard, regular ;
+   text-shadow: 2px 2px 4px #000000;
+}
+
+p{
+   color : #ffffff;
+   font-style: italic;
+   font-family: Luminari, fantasy ;
+   text-decoration: underline;
+   font-size: 2.5em;
+}
+/*navigation*/
+
+
+
+input{
+display: inline-block;
+background-image: linear-gradient(to right bottom, #ffffff, rgb(255, 255, 254));
+border-radius: 10px;
+border: 4px double #000000;
+color: #777474;
+text-align: center;
+font-size: 28px;
+padding: 20px;
+width: 200px;
+margin: 5px;
+}
+
+button {
+  display: inline-block;
+  background-image: linear-gradient(to right bottom,rgb(255, 255, 255),  #ffffff);
+  border-radius: 10px;
+  border: 4px double #000000;
+  color: #777474;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  margin: 5px;
+    }
+
+/*Footer*/
+
+.signature
+{
+  /*position:absolute;*/
+  bottom:0;
+  width:100%;
+  padding-top:50px;
+  height:50px;
+  font-size: 1.5em;
+}
+ 
